@@ -5,6 +5,7 @@ import useActivityStore from '../store/activityStore';
 export default function Home () {
   const steps = useActivityStore((state) => state.steps );
   const setSteps = useActivityStore((state)=> state.setSteps);
+  const goal = 10000;
  useEffect(() => {
   let stepestotal;
 
@@ -20,7 +21,8 @@ export default function Home () {
 }, []);
   return (
     <View>
-      <Text>{steps}</Text>
+      <Text> Today's Steps : {steps}</Text>
+      <Text>Goal for Today is : {goal}</Text>
     </View>
   );
 }
