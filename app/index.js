@@ -59,6 +59,11 @@ export default function home () {
         <Text style={styles.statLabel}>Distance</Text>
       </View>
     </View>
+    <View style={styles.sessionButton}>
+  <Text style={styles.sessionButtonText}>
+    Start Session
+  </Text>
+</View>
 </View>
   );
 }
@@ -115,5 +120,18 @@ statValue: {
 statLabel: {
   color: '#A0A0A0',
   marginTop: 5,
+},
+sessionButton: {
+  backgroundColor: '#9FEA00',
+  borderRadius: 30,
+  paddingVertical: 20,
+  marginTop: 30,
+  alignItems: 'center',
+},
+
+sessionButtonText: {
+  fontSize: 20,
+  fontWeight: 'bold',
+  color: '#041224',
 },
 });
