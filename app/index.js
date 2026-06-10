@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import { Pedometer } from 'expo-sensors';
 import useActivityStore from '../store/activityStore';
 import ProgressRing from '../components/ProgressRing';
+
+
 export default function home () {
   const steps = useActivityStore((state) => state.steps );
   const setSteps = useActivityStore((state)=> state.setSteps);
@@ -134,4 +136,5 @@ sessionButtonText: {
   fontWeight: 'bold',
   color: '#041224',
 },
+
 });
