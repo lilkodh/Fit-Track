@@ -2,7 +2,7 @@
 import { steps } from "react-native-reanimated";
 import {create } from "zustand";
 const useActivityStore = create((set) => ({
-    steps: 0,
+    steps: 10900,
     setSteps: (newSteps) => {
         set({steps: newSteps});
     },
