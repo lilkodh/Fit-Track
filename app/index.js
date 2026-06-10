@@ -5,13 +5,19 @@ import useActivityStore from '../store/activityStore';
 export default function Home () {
   const steps = useActivityStore((state) => state.steps );
   const setSteps = useActivityStore((state)=> state.setSteps);
-  useEffect(() => {
-Pedometer.isAvailableAsync()
-.then((result)=>{
-    console.log('Pedometer available:', result);
+ useEffect(() => {
+  let stepestotal;
 
-});
-  },[])
+  Pedometer.isAvailableAsync()
+    .then((result) => {
+      console.log('Pedometer available:', result);
+      if (result) {
+        stepestotal = Pedometer.watchStepCount((data) => {
+         setSteps(data.steps);
+        });
+      }
+    });
+}, []);
   return (
     <View>
       <Text>{steps}</Text>
