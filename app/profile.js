@@ -1,21 +1,29 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function Profile() {
+export default function profile() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>
-        Profile
-      </Text>
-      <View style={styles.profileInfo}>
+      <View style={styles.header}>
+        <Text style={styles.title}>
+          History
+        </Text>
+
+        <Text style={styles.settings}>
+          ⚙️
+        </Text>
+      </View>
+      <View style={styles.profileCard}>
   <View style={styles.avatar} />
 
-  <Text style={styles.name}>
-    Khalid
-  </Text>
+  <View>
+    <Text style={styles.name}>
+      Ahmed
+    </Text>
 
-  <Text style={styles.email}>
-    khalid@example.com
-  </Text>
+    <Text style={styles.level}>
+      Level 8
+    </Text>
+  </View>
 </View>
     </View>
   );
@@ -24,37 +32,53 @@ export default function Profile() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#041224',
+    backgroundColor: '#020B1A',
+    padding: 20,
     paddingTop: 60,
-    paddingHorizontal: 20,
+  },
+
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 
   title: {
     color: 'white',
-    fontSize: 32,
+    fontSize: 36,
     fontWeight: 'bold',
   },
-  profileInfo: {
+
+  settings: {
+    fontSize: 28,
+  },
+  profileCard: {
+  backgroundColor: '#0D1B2A',
+  borderRadius: 25,
+  padding: 20,
+  marginTop: 25,
+
+  flexDirection: 'row',
   alignItems: 'center',
-  marginTop: 30,
 },
 
 avatar: {
-  width: 100,
-  height: 100,
-  borderRadius: 50,
+  width: 80,
+  height: 80,
+  borderRadius: 40,
   backgroundColor: '#9FEA00',
+  marginRight: 20,
 },
 
 name: {
   color: 'white',
-  fontSize: 24,
+  fontSize: 28,
   fontWeight: 'bold',
-  marginTop: 15,
 },
 
-email: {
-  color: '#A0A0A0',
+level: {
+  color: '#9FEA00',
+  fontSize: 18,
   marginTop: 5,
 },
 });
