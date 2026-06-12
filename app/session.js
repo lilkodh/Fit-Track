@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import SessionCard from '../components/SessionCard';
 
 export default function Session() {
@@ -52,6 +52,29 @@ export default function Session() {
 <View style={styles.mapCard}>
   <Text style={styles.mapText}>
     Map Preview
+  </Text>
+</View>
+<View style={styles.controls}>
+  <View style={styles.controlButton}>
+    <Text style={styles.controlIcon}>⏸</Text>
+  </View>
+
+  <View style={styles.stopButton}>
+    <Text style={styles.controlIcon}>⏹</Text>
+  </View>
+
+  <View style={styles.controlButton}>
+    <Text style={styles.controlIcon}>➕</Text>
+  </View>
+  
+</View>
+<View style={styles.heartCard}>
+  <Text style={styles.heartLabel}>
+    Heart Rate
+  </Text>
+
+  <Text style={styles.heartValue}>
+    124 BPM
   </Text>
 </View>
 </View>
@@ -135,5 +158,53 @@ mapCard: {
 mapText: {
   color: '#A0A0A0',
   fontSize: 16,
+},
+controls: {
+  flexDirection: 'row',
+  justifyContent: 'space-evenly',
+  marginTop: 25,
+},
+
+controlButton: {
+  width: 70,
+  height: 70,
+  borderRadius: 35,
+  backgroundColor: '#0D1B2A',
+
+  justifyContent: 'center',
+  alignItems: 'center',
+},
+
+stopButton: {
+  width: 80,
+  height: 80,
+  borderRadius: 40,
+  backgroundColor: '#F59E0B',
+
+  justifyContent: 'center',
+  alignItems: 'center',
+},
+
+controlIcon: {
+  fontSize: 28,
+},
+heartCard: {
+  backgroundColor: '#0D1B2A',
+  borderRadius: 25,
+  padding: 20,
+  marginTop: 25,
+  marginBottom: 20,
+},
+
+heartLabel: {
+  color: '#A0A0A0',
+  fontSize: 16,
+},
+
+heartValue: {
+  color: 'white',
+  fontSize: 32,
+  fontWeight: 'bold',
+  marginTop: 10,
 },
 });
