@@ -4,7 +4,6 @@ import { Pedometer } from 'expo-sensors';
 import useActivityStore from '../store/activityStore';
 import ProgressRing from '../components/ProgressRing';
 
-
 export default function home () {
   const steps = useActivityStore((state) => state.steps );
   const setSteps = useActivityStore((state)=> state.setSteps);
@@ -22,6 +21,7 @@ export default function home () {
       if (result) {
         stepestotal = Pedometer.watchStepCount((data) => {
          setSteps(data.steps);
+        
         });
       }
     });

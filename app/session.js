@@ -49,6 +49,11 @@ export default function Session() {
     label="Pace"
   />
 </View>
+<View style={styles.mapCard}>
+  <Text style={styles.mapText}>
+    Map Preview
+  </Text>
+</View>
 </View>
     
   );
@@ -116,5 +121,19 @@ statsRow: {
   flexDirection: 'row',
   gap: 10,
   marginTop: 30,
+},
+mapCard: {
+  height: 220,
+  backgroundColor: '#0D1B2A',
+  borderRadius: 30,
+  marginTop: 25,
+
+  justifyContent: 'center',
+  alignItems: 'center',
+},
+
+mapText: {
+  color: '#A0A0A0',
+  fontSize: 16,
 },
 });
