@@ -1,21 +1,36 @@
 import { View, Text, StyleSheet } from 'react-native';
-import SessionCard from '../components/SessionCard';
 
-export default function session() {
+export default function Session() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Session</Text>
+  <View style={styles.container}>
+  <View style={styles.header}>
+    <Text style={styles.back}>←</Text>
 
-      <Text style={styles.subtitle}>
-        Choose an activity
-      </Text>
+    <Text style={styles.title}>
+      Session
+    </Text>
 
-      <SessionCard title="🚶 Walking" />
+    <Text style={styles.gps}>
+      GPS
+    </Text>
+  </View>
 
-      <SessionCard title="🏃 Running" />
+  <View style={styles.activityBadge}>
+    <Text style={styles.activityText}>
+      🚶 Walking
+    </Text>
+  </View>
+  <View style={styles.timerContainer}>
+  <Text style={styles.timer}>
+    00:32:45
+  </Text>
 
-      <SessionCard title="🚴 Cycling" />
-    </View>
+  <Text style={styles.duration}>
+    Duration
+  </Text>
+</View>
+</View>
+    
   );
 }
 
@@ -27,16 +42,54 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
 
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+
+  back: {
+    color: 'white',
+    fontSize: 28,
+  },
+
   title: {
     color: 'white',
     fontSize: 32,
     fontWeight: 'bold',
   },
 
-  subtitle: {
-    color: '#A0A0A0',
+  gps: {
+    color: '#9FEA00',
     fontSize: 18,
-    marginTop: 10,
-    marginBottom: 20,
   },
+  activityBadge: {
+  alignSelf: 'center',
+  backgroundColor: '#16263B',
+  paddingHorizontal: 25,
+  paddingVertical: 10,
+  borderRadius: 30,
+  marginTop: 25,
+},
+
+activityText: {
+  color: 'white',
+  fontSize: 18,
+},
+timerContainer: {
+  alignItems: 'center',
+  marginTop: 30,
+},
+
+timer: {
+  color: 'white',
+  fontSize: 64,
+  fontWeight: 'bold',
+},
+
+duration: {
+  color: '#A0A0A0',
+  fontSize: 20,
+  marginTop: 10,
+},
 });
