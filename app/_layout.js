@@ -34,7 +34,7 @@ export default function Layout() {
       <Tabs.Screen
         name="session"
         options={{
-          title: 'Session',
+          title: 'session',
           tabBarIcon: ({ color, size }) => (
             <Ionicons
               name="barbell"
@@ -44,7 +44,6 @@ export default function Layout() {
           ),
         }}
       />
-
       <Tabs.Screen
         name="profile"
         options={{
