@@ -3,7 +3,7 @@ import SessionCard from '../components/SessionCard';
 
 export default function Session() {
   return (
-  <View style={styles.container}>
+  <ScrollView style={styles.container}>
   <View style={styles.header}>
     <Text style={styles.back}>←</Text>
 
@@ -77,7 +77,7 @@ export default function Session() {
     124 BPM
   </Text>
 </View>
-</View>
+</ScrollView>
     
   );
 }
