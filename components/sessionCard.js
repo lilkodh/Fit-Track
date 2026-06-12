@@ -1,24 +1,41 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function SessionCard({ title }) {
+export default function SessionCard({ value, unit, label }) {
   return (
     <View style={styles.card}>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.value}>{value}</Text>
+
+      <Text style={styles.unit}>{unit}</Text>
+
+      <Text style={styles.label}>{label}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   card: {
+    flex: 1,
     backgroundColor: '#0D1B2A',
-    padding: 20,
+    paddingVertical: 20,
     borderRadius: 20,
-    marginTop: 15,
+    alignItems: 'center',
   },
 
-  title: {
+  value: {
     color: 'white',
-    fontSize: 18,
-    fontWeight: '600',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+
+  unit: {
+    color: '#A0A0A0',
+    fontSize: 12,
+    marginTop: 2,
+  },
+
+  label: {
+    color: '#A0A0A0',
+    marginTop: 10,
+    fontSize: 14,
   },
 });

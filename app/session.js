@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native';
+import SessionCard from '../components/SessionCard';
 
 export default function Session() {
   return (
@@ -28,6 +29,25 @@ export default function Session() {
   <Text style={styles.duration}>
     Duration
   </Text>
+</View>
+<View style={styles.statsRow}>
+  <SessionCard
+    value="2.64"
+    unit="km"
+    label="Distance"
+  />
+
+  <SessionCard
+    value="5.2"
+    unit="km/h"
+    label="Speed"
+  />
+
+  <SessionCard
+    value="11:32"
+    unit="/km"
+    label="Pace"
+  />
 </View>
 </View>
     
@@ -91,5 +111,10 @@ duration: {
   color: '#A0A0A0',
   fontSize: 20,
   marginTop: 10,
+},
+statsRow: {
+  flexDirection: 'row',
+  gap: 10,
+  marginTop: 30,
 },
 });
